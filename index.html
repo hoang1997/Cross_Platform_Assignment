@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" href="css/custom.css" /> 
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" /> 
+<script type="text/javascript" src="cordova.js"></script>
+</head>
+
+<body>
+    <div data-role="content">
+        <div data-role="page" id="home"> 
+            <div data-role="header">                
+                <h2>Home</h2>
+            </div>  
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="./assets/imgs/food1.jpeg" class="blog-image">
+                    <div class="blog-card-header-box">Health and Wellbeing</div>
+                </div>
+                <div class="blog-card-content">
+                    <h3>Avocado the new super food?</h3>
+                    <p class="sub-title"> Green taking over </p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="./assets/imgs/food1.jpeg" class="blog-image">
+                    <div class="blog-card-header-box">Health and Wellbeing</div>
+                </div>
+                <div class="blog-card-content">
+                    <h3>Avocado the new super food?</h3>
+                    <p class="sub-title"> Green taking over </p>
+                    01.09.18
+                </div>
+            </div>
+            <div data-role="navbar" class="navbar" data-position="fixed" data-shadow="off">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home" class="ui-nodisc-icon">Home</a></li>
+                    <li><a href="#fridge" data-transition="none" data-icon="plus" class="ui-nodisc-icon">Fridge</a></li>
+                    <li><a href="#recipes" data-transition="none" data-icon="tag" class="ui-nodisc-icon">Recipes</a></li>
+                    <li><a href="#favourites" data-transition="none" data-icon="star" class="ui-nodisc-icon">Favourites</a></li>
+                    <li><a href="#settings" data-transition="none" data-icon="bars" class="ui-nodisc-icon">Settings</a></li>
+                </ul>
+            </div>
+        </div> 
+
+        <div data-role="page" id="fridge">
+            <div data-role="header">
+                <h2>Fridge</h2>
+            </div>
+            <div role="main" class="ui-content">
+                <form class="ui-filterable">
+                    <input id="fInput" data-type="search">
+                    <button id="addBtn" type="button">Add</button>
+                    <button id="clearBtn" type="button">Clear</button>
+                </form>
+                <ul id="list" class="touch foodList" data-role="listview" data-icon="false" data-split-icon="delete">
+                </ul>
+            </div>
+            <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
+                <p id="question">Are you sure you want to delete:</p>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+                    </div>
+                </div>
+            </div>
+            <div data-role="navbar" class="navbar" data-position="fixed" data-shadow="off">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home" class="ui-nodisc-icon">Home</a></li>
+                    <li><a href="#fridge" data-transition="none" data-icon="plus" class="ui-nodisc-icon">Fridge</a></li>
+                    <li><a href="#recipes" data-transition="none" data-icon="tag" class="ui-nodisc-icon">Recipes</a></li>
+                    <li><a href="#favourites" data-transition="none" data-icon="star" class="ui-nodisc-icon">Favourites</a></li>
+                    <li><a href="#settings" data-transition="none" data-icon="bars" class="ui-nodisc-icon">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="recipes">
+            <div data-role="header">
+                <h2>Recipes</h2>
+            </div>
+            <div role="main" class="ui-content recipe-container"></div>
+            <div data-role="navbar" class="navbar" data-position="fixed" data-shadow="off">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home" class="ui-nodisc-icon">Home</a></li>
+                    <li><a href="#fridge" data-transition="none" data-icon="plus" class="ui-nodisc-icon">Fridge</a></li>
+                    <li><a href="#recipes" data-transition="none" data-icon="tag" class="ui-nodisc-icon">Recipes</a></li>
+                    <li><a href="#favourites" data-transition="none" data-icon="star" class="ui-nodisc-icon">Favourites</a></li>
+                    <li><a href="#settings" data-transition="none" data-icon="bars" class="ui-nodisc-icon">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="favourites">
+            <div data-role="header">
+                <h2>Favourites</h2>
+            </div>
+            <div role="main" class="ui-content">
+                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my
+                    id is beeing clicked.</p>
+            </div>
+            <div data-role="navbar" class="navbar" data-position="fixed" data-shadow="off">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home" class="ui-nodisc-icon">Home</a></li>
+                    <li><a href="#fridge" data-transition="none" data-icon="plus" class="ui-nodisc-icon">Fridge</a></li>
+                    <li><a href="#recipes" data-transition="none" data-icon="tag" class="ui-nodisc-icon">Recipes</a></li>
+                    <li><a href="#favourites" data-transition="none" data-icon="star" class="ui-nodisc-icon">Favourites</a></li>
+                    <li><a href="#settings" data-transition="none" data-icon="bars" class="ui-nodisc-icon">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="settings">
+            <div data-role="header">
+                <h2>Settings</h2>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="tabs">
+                    <ul data-role="listview" data-inset="true" class="tablist-left">
+                        <li><a href="#one" data-ajax="false">Allergies/Intolerances</a></li>
+                        <li><a href="#two" data-ajax="false">Email</a></li>
+                        <li><a href="ajax-content-ignore.html" data-ajax="false">Password</a></li>
+                    </ul>         
+                </div>
+            </div>
+            <div data-role="navbar" class="navbar" data-position="fixed" data-shadow="off">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home" class="ui-nodisc-icon">Home</a></li>
+                    <li><a href="#fridge" data-transition="none" data-icon="plus" class="ui-nodisc-icon">Fridge</a></li>
+                    <li><a href="#recipes" data-transition="none" data-icon="tag" class="ui-nodisc-icon">Recipes</a></li>
+                    <li><a href="#favourites" data-transition="none" data-icon="star" class="ui-nodisc-icon">Favourites</a></li>
+                    <li><a href="#settings" data-transition="none" data-icon="bars" class="ui-nodisc-icon">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="sRecipe">
+            <div data-role="header" class="sRecipe-header">
+                    <h2>Settings</h2>
+            </div>
+            <div role="main" class="ui-content sRecipe-container">
+                <div id="recipe-box-detail"></div>
+        
+            </div>
+            
+            <div data-role="navbar" class="navbar" data-position="fixed" data-shadow="off">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home" class="ui-nodisc-icon">Home</a></li>
+                    <li><a href="#fridge" data-transition="none" data-icon="plus" class="ui-nodisc-icon">Fridge</a></li>
+                    <li><a href="#recipes" data-transition="none" data-icon="tag" class="ui-nodisc-icon">Recipes</a></li>
+                    <li><a href="#favourites" data-transition="none" data-icon="star" class="ui-nodisc-icon">Favourites</a></li>
+                    <li><a href="#settings" data-transition="none" data-icon="bars" class="ui-nodisc-icon">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+    <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>   
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> 
+    <script src="js/jqm_defaults.js"></script>   
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+    
+</html> 
