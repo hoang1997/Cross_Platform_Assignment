@@ -16,5 +16,5 @@ Plugins used:
 
 App Demo for FoodThought recipe app: 
 
-https://www.youtube.com/watch?v=hJU6y8G8ZOI
+https://www.youtube.com/watch?v=fLFR0d-Mr4I
 
